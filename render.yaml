@@ -27,7 +27,6 @@ services:
   - type: web
     name: shopco-frontend
     runtime: static
-    plan: free
     buildCommand: "npm run build"
     staticPublishPath: "build"
     envVars:
