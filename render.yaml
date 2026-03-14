@@ -33,4 +33,4 @@ services:
     staticPublishPath: "build"
     envVars:
       - key: REACT_APP_API_URL
-        value: "https://shopco-backend.onrender.com/"
+        value: "https://shopco-backend-bv00.onrender.com/"
