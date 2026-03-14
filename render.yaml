@@ -9,6 +9,7 @@ services:
     name: shopco-backend
     runtime: python
     plan: free
+    rootDir: shopco-backend
     buildCommand: "./build.sh"
     startCommand: "gunicorn backend.wsgi:application"
     envVars:
@@ -24,11 +25,11 @@ services:
         value: "*"
 
   # 2. React Frontend
-  - type: web
+  - type: static
     name: shopco-frontend
-    runtime: static
+    rootDir: shopco-frontend
     buildCommand: "npm run build"
-    staticPublishPath: "build"
+    publishPath: "build"
     envVars:
       - key: REACT_APP_API_URL
         fromService:
