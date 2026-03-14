@@ -25,11 +25,12 @@ services:
         value: "*"
 
   # 2. React Frontend
-  - type: static
+  - type: web
     name: shopco-frontend
+    runtime: static
     rootDir: shopco-frontend
     buildCommand: "npm run build"
-    publishPath: "build"
+    staticPublishPath: "build"
     envVars:
       - key: REACT_APP_API_URL
         fromService:
