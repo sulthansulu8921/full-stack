@@ -1,0 +1,25 @@
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('products/', include('products.urls')),
+    path('auth/', include('accounts.urls')),
+    path('cart/', include('cart.urls')),
+    path('orders/', include('orders.urls')),
+    path("reviews/", include("reviews.urls")), 
+]
+
+# MEDIA FILES (image upload support)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+# ✅ THIS SERVES IMAGES
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
+    )

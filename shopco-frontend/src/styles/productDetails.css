@@ -1,0 +1,533 @@
+/* =========================
+   TOP SECTION
+========================= */
+
+.details-top {
+  align-items: flex-start;
+}
+
+.details-images img {
+  border-radius: 14px;
+  background: #f5f5f5;
+}
+
+/* THUMBNAILS */
+.thumbs {
+  width: 90px;
+}
+
+.thumbs img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 2px solid transparent;
+}
+
+.thumbs img.active {
+  border-color: #000;
+}
+
+/* MAIN IMAGE */
+.main-image {
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.main-image img {
+  max-height: 420px;
+  object-fit: contain;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.details-info h1 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.rating {
+  color: #f5a623;
+  font-size: 14px;
+}
+
+.rating-text {
+  color: #000;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.discount {
+  color: #e11d48;
+  font-weight: 600;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   COLORS
+========================= */
+
+.color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.black {
+  background: #000;
+}
+
+.green {
+  background: #2e7d32;
+}
+
+.navy {
+  background: #1a237e;
+}
+
+/* =========================
+   SIZES
+========================= */
+
+.size-btn {
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.size-btn.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* =========================
+   CART
+========================= */
+
+.qty {
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 6px 14px;
+}
+
+.qty button {
+  border: none;
+  background: none;
+  font-size: 18px;
+}
+
+.add-cart {
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-weight: 600;
+  border: none;
+}
+
+/* =========================
+   TABS
+========================= */
+
+.details-tabs {
+  font-size: 15px;
+}
+
+.details-tabs span {
+  cursor: pointer;
+  padding-bottom: 12px;
+  font-weight: 600;
+  color: #777;
+}
+
+.details-tabs .active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews-header h3 span {
+  color: #999;
+  font-weight: 400;
+}
+
+.filter-icon,
+.latest-btn {
+  border-radius: 30px;
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.write-review-btn {
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  padding: 8px 16px;
+  border: none;
+}
+
+.review-card {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.stars {
+  color: #f5a623;
+}
+
+.verified {
+  color: #22c55e;
+}
+
+/* =========================
+   YOU MIGHT ALSO LIKE
+========================= */
+
+.like-title {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.like-scroll {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.like-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.like-grid {
+  display: flex;
+  gap: 24px;
+}
+
+/* CARD SIZE — KEY FIX */
+.like-card {
+  flex: 0 0 220px;
+  /* ✅ FIXED WIDTH */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* IMAGE BOX — SAME SIZE */
+.like-img-box {
+  width: 100%;
+  height: 220px;
+  /* ✅ UNIFORM HEIGHT */
+  background: #f5f5f5;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-img-box img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* TITLE */
+.like-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0 4px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* PRICE */
+.like-price {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.like-price-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+}
+
+/* RATING */
+.like-card .rating {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .like-card {
+    flex: 0 0 180px;
+    /* smaller cards on mobile */
+  }
+
+  .like-img-box {
+    height: 180px;
+  }
+}
+
+.load-more {
+  background: #f5f5f5;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE (FIGMA STYLE)
+========================= */
+
+@media (max-width: 768px) {
+  .details-top {
+    flex-direction: column;
+  }
+
+  .thumbs {
+    flex-direction: row;
+    width: 100%;
+    order: 2;
+  }
+
+  .main-image {
+    order: 1;
+  }
+
+  .details-info h1 {
+    font-size: 24px;
+  }
+
+  .cart-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .add-cart {
+    width: 100%;
+  }
+}
+
+/* =========================
+   FINAL FIGMA MOBILE IMAGE FIX
+========================= */
+@media (max-width: 768px) {
+
+  /* FULL WIDTH IMAGE CARD LIKE FIGMA */
+  .details-images {
+    width: 100%;
+    align-items: center;
+  }
+
+  .main-image {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px;
+    border-radius: 24px;
+    background: #f5f5f5;
+    border: none;
+    /* ❌ remove blue debug border */
+  }
+
+  .main-image img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    /* 🔥 FIGMA SCALE */
+    object-fit: contain;
+  }
+
+  /* THUMBNAILS — SAME ROW, CENTERED */
+  .thumbs {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  .thumbs img {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: #f5f5f5;
+    border: 2px solid transparent;
+  }
+
+  .thumbs img.active {
+    border-color: #000;
+  }
+}
+
+/* REVIEW MODAL */
+.review-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 998;
+}
+
+.review-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 24px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 16px;
+  z-index: 999;
+}
+
+.review-modal h3 {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.review-modal input,
+.review-modal textarea,
+.review-modal select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.review-modal textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.cancel-btn {
+  flex: 1;
+  background: #eee;
+  border-radius: 30px;
+  padding: 12px;
+  border: none;
+}
+
+.submit-btn {
+  flex: 1;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  padding: 12px;
+  border: none;
+}
+
+.verified {
+  color: #22c55e;
+  font-size: 12px;
+}
+
+
+
+/* =========================
+   CART ROW – FIGMA MODEL
+========================= */
+
+.cart-row-figma {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+/* QUANTITY PILL */
+.qty-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+}
+
+.qty-pill button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.qty-pill span {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ADD TO CART BUTTON */
+.add-cart-btn {
+  flex: 1;
+  height: 44px;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* MOBILE – SAME AS FIGMA */
+@media (max-width: 768px) {
+  .cart-row-figma {
+    gap: 12px;
+  }
+
+  .qty-pill {
+    width: 120px;
+  }
+}

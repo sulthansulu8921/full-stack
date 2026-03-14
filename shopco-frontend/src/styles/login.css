@@ -1,0 +1,104 @@
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-wrapper {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+}
+
+/* CARD */
+.login-card {
+  background: #ffffff;
+  padding: 32px 28px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  max-width: 460px;     /* ✅ KEY FIX */
+  margin: 0 auto;      /* ✅ CENTER */
+  width: 100%;
+}
+
+/* TITLE */
+.login-title {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* INPUTS */
+.login-input {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-bottom: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.login-input::placeholder {
+  color: #aaa;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* BUTTON */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+/* FOOTER TEXT */
+.login-footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 18px;
+  color: #666;
+}
+
+.login-footer span {
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+  .login-card {
+    padding: 26px 22px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+}
+
+.login-wrapper {
+  min-height: 100vh;   
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+}

@@ -1,0 +1,216 @@
+/* ===== SECTION ===== */
+.dress-style {
+  padding: 0 16px;
+  margin: 50px 0;
+}
+
+.dress-container {
+  max-width: 1240px;
+  margin: auto;
+  background: #f0f0f0;
+  border-radius: 40px;
+  padding: 70px 64px;
+}
+
+.dress-title {
+  text-align: center;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 64px;
+  color: #000;
+}
+
+/* ===== GRID ===== */
+.dress-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 289px;
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.dress-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dress-card:hover {
+  transform: scale(1.02);
+}
+
+/* Specific layouts for Desktop */
+@media (min-width: 769px) {
+  .formal {
+    grid-column: span 1;
+  }
+
+  .party {
+    grid-column: span 1;
+  }
+
+  .dress-grid> :nth-child(1) {
+    grid-column: 1 / 2;
+  }
+
+  /* casual short */
+  .dress-grid> :nth-child(2) {
+    grid-column: 2 / 3;
+  }
+
+  /* formal long */
+  .dress-grid> :nth-child(3) {
+    grid-column: 1 / 3;
+  }
+
+  /* TEMP - will fix with areas */
+
+  .dress-grid {
+    grid-template-areas:
+      "casual formal formal"
+      "party party gym";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .casual {
+    grid-area: casual;
+  }
+
+  .formal {
+    grid-area: formal;
+  }
+
+  .party {
+    grid-area: party;
+  }
+
+  .gym {
+    grid-area: gym;
+  }
+}
+
+/* GRID SYSTEM */
+@media (min-width: 769px) {
+  .dress-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: 289px;
+    gap: 20px;
+  }
+
+  /* Row 1: Casual (1/3) | Formal (2/3) */
+  .dress-card.casual {
+    grid-column: span 1 !important;
+  }
+
+  .dress-card.formal {
+    grid-column: span 2 !important;
+  }
+
+  /* Row 2: Party (2/3) | Gym (1/3) */
+  .dress-card.party {
+    grid-column: span 2 !important;
+  }
+
+  .dress-card.gym {
+    grid-column: span 1 !important;
+  }
+}
+
+/* TITLE INSIDE CARD */
+.dress-card span {
+  display: block;
+  margin: 25px 36px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  z-index: 2;
+}
+
+/* OVERLAY */
+.dress-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+/* ===== BACKGROUND IMAGES ===== */
+
+.casual {
+  background-image: url("https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop");
+  background-position: right top;
+}
+
+.formal {
+  background-image: url("https://images.unsplash.com/photo-1507679799987-c71177d603f5?q=80&w=800&auto=format&fit=crop");
+  background-position: center 20%;
+}
+
+.party {
+  background-image: url("https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?q=80&w=800&auto=format&fit=crop");
+}
+
+.gym {
+  background-image: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop");
+}
+
+/* ===== BACKGROUND IMAGES ===== */
+
+.casual {
+  background-image: url("/public/dress-style-1.png");
+}
+
+.formal {
+  background-image: url("https://northstarworkwear.com.au/images/dress-styles/img2.svg");
+}
+
+.party {
+  background-image: url("https://x-shop-eight.vercel.app/_next/static/media/gallery3.42e9e483.png");
+}
+
+.gym {
+  background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTvt2g9RT4GJotnkXvL4UA8c3c9JcNspIGVkaZwOJ0vUYiOLqTh");
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .dress-style {
+    padding: 0 16px;
+  }
+
+  .dress-container {
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .dress-title {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  .dress-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+  }
+
+  .dress-card {
+    height: 190px;
+  }
+
+  .dress-card span {
+    font-size: 24px;
+    margin: 16px 24px;
+  }
+}

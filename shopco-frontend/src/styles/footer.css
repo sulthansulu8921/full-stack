@@ -1,0 +1,78 @@
+.footer {
+  background: #f0f0f0;
+  padding: 140px 0 30px;
+  /* Extra padding for newsletter overlap */
+  font-size: 14px;
+  color: #555;
+}
+
+.footer-top {
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  font-weight: 800;
+  font-size: 22px;
+  color: #000;
+}
+
+.footer-desc {
+  margin: 16px 0;
+  max-width: 280px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+  font-size: 18px;
+  color: #000;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  color: #000;
+}
+
+.footer-col p {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-payments {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-payments img {
+  height: 22px;
+  object-fit: contain;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+  }
+}
