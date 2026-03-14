@@ -1,11 +1,10 @@
-services:
-  # 1. PostgreSQL Database
-  - type: db
-    name: shopco-db
+databases:
+  - name: shopco-db
     plan: free
     ipAllowList: [] # Only allow internal connections
 
-  # 2. Django Backend
+services:
+  # 1. Django Backend
   - type: web
     name: shopco-backend
     runtime: python
@@ -22,9 +21,9 @@ services:
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
-        value: "*" # Update this with your backend service name once deployed (e.g., shopco-backend.onrender.com)
+        value: "*"
 
-  # 3. React Frontend
+  # 2. React Frontend
   - type: web
     name: shopco-frontend
     runtime: static
